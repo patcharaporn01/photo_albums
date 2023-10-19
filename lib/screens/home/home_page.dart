@@ -54,8 +54,8 @@ class _HomePageState extends State<HomePage> {
           Text(
             "Photo Albums",
             style: TextStyle(
-              fontSize: 20, // Increase the font size
-              fontWeight: FontWeight.bold, // You can make it bold if desired
+              fontSize: 20, 
+              fontWeight: FontWeight.bold, 
             ),
           ),
           const SizedBox(height: 16),
@@ -97,9 +97,9 @@ class _HomePageState extends State<HomePage> {
       body = Column(
         children: [
           Text(
-            "Error: $_error", // Display the error message
+            "Error: $_error", 
             style: TextStyle(
-              fontSize: 24, // You can adjust the font size
+              fontSize: 24, 
             ),
           ),
           const SizedBox(height: 16),
