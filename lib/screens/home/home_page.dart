@@ -22,7 +22,8 @@ class _HomePageState extends State<HomePage> {
         _error = null;
       });
 
-      final response = await _dio.get('https://jsonplaceholder.typicode.com/albums');
+      final response =
+      await _dio.get('https://jsonplaceholder.typicode.com/albums');
       debugPrint(response.data.toString());
 
       List list = jsonDecode(response.data.toString());
@@ -66,8 +67,24 @@ class _HomePageState extends State<HomePage> {
                 return Card(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Row(children: [
-                      Expanded(child: Text(todoItem.title)),
+                    child: Column(children: [
+                      Row(
+                        children: [
+                          Text(todoItem.title),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Card(
+                              color: Colors.red[100],
+                              child:
+                              Text('Album ID: ' + todoItem.id.toString())),
+                          Card(
+                              color: Colors.blue[100],
+                              child: Text(
+                                  'User ID: ' + todoItem.userId.toString()))
+                        ],
+                      )
                     ]),
                   ),
                 );
